@@ -1,6 +1,6 @@
 {
   "name": "cachefn",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Decorate async functions with an expiring cache so costly operations don't need to be run all the time.",
   "author": "Daniel Escoz <darkhogg+npm@gmail.com>",
   "license": "MIT",

@@ -1,7 +1,7 @@
 const debug = require('debug')('cachedFunction');
 const ms = require('ms');
 
-module.exports = function cacheFunction (func, timeout = Number.POSITIVE_INFINITY, thisArg = udnefined) {
+module.exports = function cacheFunction (func, timeout = Number.POSITIVE_INFINITY, thisArg = undefined) {
     const millis = ms(timeout);
     const funcId = 1 + Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 
