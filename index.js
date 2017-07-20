@@ -1,7 +1,7 @@
 const debug = require('debug')('cachedFunction');
 const ms = require('ms');
 
-module.exports = function cacheFunction (func, timeout = Number.POSITIVE_INFINITY) {
+module.exports = function cacheFunction (func, timeout = Number.POSITIVE_INFINITY, thisArg = udnefined) {
     const millis = ms(timeout);
     const funcId = 1 + Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 
@@ -27,7 +27,7 @@ module.exports = function cacheFunction (func, timeout = Number.POSITIVE_INFINIT
 
     resultFunc.exec = function () {
         debug('[%s] run original function: %s', funcId, func.name || '<anonymous>');
-        return Promise.resolve(func());
+        return Promise.resolve(func.apply(thisArg, arguments));
     };
 
     return resultFunc;
