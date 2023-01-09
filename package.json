@@ -7,7 +7,7 @@
   "repository": "https://github.com/Darkhogg/node-cachefn",
   "main": "index.js",
   "dependencies": {
-    "debug": "^2.6.8",
+    "debug": "^3.1.0",
     "ms": "^2.0.0"
   }
 }
